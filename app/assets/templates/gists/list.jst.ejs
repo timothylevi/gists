@@ -1,0 +1,5 @@
+<a class="caption" href="#/gists/<%= gist.id %>"><%= gist.escape("title") %></a>
+<p class="<%= gist.get("favorite") ? "" : "can-favorite" %>">
+<button class="favorite">Favorite</button>
+<button class="unfavorite">Unfavorite</button>
+</p>

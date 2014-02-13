@@ -1,0 +1,87 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+html, body, div, p, ul, li, h1, h3, button, input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  vertical-align: baseline;
+  font-family: helvetica;
+}
+
+button {
+  padding: 3px;
+  background-color: #dddddd;
+  margin: 0px;
+  font-size: 16px;
+}
+
+li > p {
+  display: block;
+  float: left;
+  padding-top: 0;
+}
+
+li {
+  height: 30px;
+}
+
+ul#navbar {
+  color: red;
+  background: blue;
+  display: block;
+  vertical-align: middle;
+}
+
+#navbar:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+
+#navbar > li {
+  float: left;
+  margin-left: 10px;
+}
+
+.caption {
+  display: inline-block;
+  padding-top: 5px;
+  margin-left: 5px;
+}
+
+.favorite {
+  display: none;
+}
+
+.unfavorite {
+  display: block;
+}
+
+.can-favorite > .favorite {
+  display: block;
+}
+
+.can-favorite > .unfavorite {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.selected {
+  background-color: yellow;
+}

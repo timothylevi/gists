@@ -1,0 +1,17 @@
+<label>Title
+  <input name="gist[title]" type="text" value="<%= gist.get("title")%>">
+</label>
+<input type="hidden" name="gist[tag_ids][]" value="">
+
+<div id="tagDiv">
+  Search
+  <ul id="tagUl" class="hidden">
+  <% NewAuthDemo.tags.each(function(tag) { %>
+    <li data-id="<%= tag.id %>"><%= tag.escape("name") %></li>
+  <% }) %>
+  </ul>
+</div>
+
+<button id="addFile">Add Gist File</button>
+
+<input type="submit">

@@ -1,0 +1,10 @@
+<br><br>
+<label>Gist File Name
+<input type="text" name="gist_files[<%= counter %>][name]" value="<%= gist_file.get("name")%>"></label><br>
+
+<label>Gist File Body
+<textarea name="gist_files[<%= counter %>][body]"><%= gist_file.escape("body") %></textarea></label>
+
+<% if (!gist_file.isNew()) { %>
+  <input type="submit" value="Save">
+<% } %>
