@@ -16,12 +16,12 @@ window.NewAuthDemo = {
 
             NewAuthDemo.tags.fetch({
               success: function() {
-                new NewAuthDemo.Routers.Gists(context);
+                var NewAuthDemo.router = new NewAuthDemo.Routers.Gists(context);
                 Backbone.history.start();
               }
-            })
+            });
           }
-        })
+        });
       }
     });
   }
