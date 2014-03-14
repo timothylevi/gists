@@ -14,7 +14,7 @@ window.TextSearchSelect = Backbone.View.extend({
     "click li": "toggleSelected"
   },
 
-  toggleList: function (event) {
+  toggleList: function () {
     var that = this;
     setTimeout(function() {
       that.$list.toggleClass("hidden");
@@ -33,7 +33,7 @@ window.TextSearchSelect = Backbone.View.extend({
       else if (!that.filterBoolean(li, filterString)) {
         $(li).addClass("hidden");
       }
-    })
+    });
   },
 
   filterBoolean: function (li, filterString) {
@@ -45,14 +45,14 @@ window.TextSearchSelect = Backbone.View.extend({
   toggleSelected: function(event) {
     event.preventDefault();
 
-    var data_id = $(event.target).attr("data-id")
-    var vals = this.$el.find("input[value='" + data_id + "']")
+    var data_id = $(event.target).attr("data-id");
+    var vals = this.$el.find("input[value='" + data_id + "']");
     if (vals.length) {
       $(vals).remove();
     } else {
       var input = "<input type='hidden' name='gist[tag_ids][]' value='" + data_id + "'>";
       this.$el.append(input);
-    };
+    }
 
     setTimeout(function() {
       $(event.target).toggleClass("selected");
