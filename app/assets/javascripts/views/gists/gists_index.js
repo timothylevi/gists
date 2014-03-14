@@ -4,10 +4,10 @@ NewAuthDemo.Views.GistsIndex = Backbone.View.extend({
   render: function() {
     var that = this;
     this.collection.each(function(gist) {
-      var view = new NewAuthDemo.Views.GistsList({model: gist})
+      var view = new NewAuthDemo.Views.GistsList({model: gist});
       that.$el.append(view.render().$el);
-    })
-    this.$el.prepend('<a href="#/gists/new">Create New Gist</a>')
+    });
+    this.$el.prepend('<a href="#/gists/new">Create New Gist</a>');
     return this;
   },
 
