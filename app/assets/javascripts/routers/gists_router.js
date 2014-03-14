@@ -1,7 +1,7 @@
 NewAuthDemo.Routers.Gists = Backbone.Router.extend({
 
   initialize: function($rootEl) {
-    this.$rootEl = $rootEl
+    this.$rootEl = $rootEl;
   },
 
   routes: {
@@ -25,13 +25,13 @@ NewAuthDemo.Routers.Gists = Backbone.Router.extend({
   },
 
   edit: function(id) {
-    var gist = NewAuthDemo.gists.get(id)
+    var gist = NewAuthDemo.gists.get(id);
     var view = new NewAuthDemo.Views.GistsForm({model: gist});
     this._swapView(view);
   },
 
   show: function(id) {
-    var gist = NewAuthDemo.gists.get(id)
+    var gist = NewAuthDemo.gists.get(id);
     var view = new NewAuthDemo.Views.GistShow({model: gist});
     this._swapView(view);
   },
