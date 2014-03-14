@@ -14,7 +14,7 @@ NewAuthDemo.Views.GistFileForm = Backbone.View.extend({
 
   render: function () {
     this.$el.html(this.template({counter: this.counter, gist_file: this.model }));
-    return this
+    return this;
   },
 
   handleFileSave: function(event) {
@@ -27,4 +27,4 @@ NewAuthDemo.Views.GistFileForm = Backbone.View.extend({
 
     }
 
-})
+});
