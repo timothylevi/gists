@@ -15,7 +15,7 @@ NewAuthDemo.Views.GistsForm = Backbone.View.extend({
     var $tagDiv = this.$el.find("#tagDiv");
     var $tagUl = this.$el.find("#tagUl");
 
-    var tss = new TextSearchSelect({div: $tagDiv, list: $tagUl})
+    var tss = new TextSearchSelect({div: $tagDiv, list: $tagUl});
 
     return this;
   },
@@ -32,10 +32,10 @@ NewAuthDemo.Views.GistsForm = Backbone.View.extend({
     console.log(formData);
 
     if (this.model.isNew()) {
-      NewAuthDemo.gists.create(formData)
+      NewAuthDemo.gists.create(formData);
     } else {
       this.model.save(formData);
-    };
+    }
   },
 
   handleAddFileEvent: function(event) {
@@ -46,14 +46,14 @@ NewAuthDemo.Views.GistsForm = Backbone.View.extend({
   },
 
   addFilePartial: function(gist_file) {
-    var gistFileForm = new NewAuthDemo.Views.GistFileForm({ counter: this.partialCount, model: gist_file })
+    var gistFileForm = new NewAuthDemo.Views.GistFileForm({ counter: this.partialCount, model: gist_file });
     this.partialCount += 1;
-    this.$el.append(gistFileForm.render().$el.html())
+    this.$el.append(gistFileForm.render().$el.html());
   },
 
   addFileShow: function(gist_file) {
-    var gistFileForm = new NewAuthDemo.Views.GistFileShow({ model: gist_file })
-    this.$el.append(gistFileForm.render().$el.html())
+    var gistFileForm = new NewAuthDemo.Views.GistFileShow({ model: gist_file });
+    this.$el.append(gistFileForm.render().$el.html());
   }
 
 
