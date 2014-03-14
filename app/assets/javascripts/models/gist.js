@@ -11,7 +11,7 @@ NewAuthDemo.Models.Gist = Backbone.Model.extend({
   toggleFavorite: function () {
     this.save({
       "favorite": !this.get("favorite")
-    })
+    });
   }
 
 });
